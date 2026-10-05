@@ -1,0 +1,36 @@
+{
+  "name": "e-commerce-api-express",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Mazoda/e-commerce-api-express#readme",
+  "bugs": {
+    "url": "https://github.com/Mazoda/e-commerce-api-express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mazoda/e-commerce-api-express.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",  
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@eslint/js": "^10.0.1",
+    "dotenv": "^18.0.5",
+    "eslint-config-prettier": "^10.1.8",
+    "express": "^5.2.1",
+    "globals": "^17.13.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0"
+  }
+}
