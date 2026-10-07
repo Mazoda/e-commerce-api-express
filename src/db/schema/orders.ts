@@ -1,4 +1,5 @@
 import {
+  index,
   integer,
   numeric,
   pgEnum,
@@ -33,4 +34,7 @@ export const orders = pgTable('orders', {
   shippingAddress: text('shipping_adress'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at'),
-});
+},(table)=>[
+  index("orders_user_id_idx").on(table.userId),
+  index("orders_status_idx").on(table.status)
+]);
