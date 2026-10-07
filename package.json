@@ -27,7 +27,7 @@
   "dependencies": {
     "@eslint/js": "^10.0.1",
     "dotenv": "^18.0.5",
-    "drizzle-orm": "^0.45.3",
+    "drizzle-orm": "^1.0.0-rc.4",
     "eslint-config-prettier": "^10.1.8",
     "express": "^5.2.1",
     "globals": "^17.13.0",
@@ -37,7 +37,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.4",
     "@types/pg": "^8.23.1",
-    "drizzle-kit": "^0.31.11",
+    "drizzle-kit": "^1.0.0-rc.4",
     "prettier": "^3.9.9",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",

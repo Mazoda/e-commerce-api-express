@@ -4,6 +4,7 @@ import {
   numeric,
   pgEnum,
   pgTable,
+  serial,
   text,
   timestamp,
   uuid,
@@ -12,7 +13,7 @@ import {
 import { categories } from './categories.js';
 import { sql } from 'drizzle-orm';
 
-export const productStatusEnum = pgEnum('status', [
+export const productStatusEnum = pgEnum('prdocut_status', [
   'draft',
   'published',
   'archived',

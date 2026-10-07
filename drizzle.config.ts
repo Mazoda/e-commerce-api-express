@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
@@ -5,9 +6,12 @@ export default defineConfig({
   out: './drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
-    ssl: {
-      rejectUnauthorized: false,
-    },
+    host: process.env.PGHOST!,
+    port: Number(process.env.PGPORT) || 5432,
+    user: process.env.PGUSER!,
+    password: process.env.PGPASSWORD!,
+    database: process.env.PGDATABASE!,
+    // Azure Flexible Server requires SSL
+    ssl: { rejectUnauthorized: false },
   },
 });

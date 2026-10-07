@@ -6,8 +6,8 @@ export const cartItems = pgTable(
   'cart_items',
   {
     id: uuid().primaryKey(),
-    cartId: integer('cart_id').references(() => carts.id),
-    productId: integer('product_id').references(() => products.id, {
+    cartId: uuid('cart_id').references(() => carts.id),
+    productId: uuid('product_id').references(() => products.id, {
       onDelete: 'cascade',
     }),
     quantity: integer(),

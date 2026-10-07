@@ -10,7 +10,7 @@ import {
 } from 'drizzle-orm/pg-core';
 import { orders } from './orders.js';
 
-export const paymentStatusEnum = pgEnum('status', [
+export const paymentStatusEnum = pgEnum('payment_status', [
   'pending',
   'requires_action',
   'authorized',
@@ -25,7 +25,7 @@ export const payments = pgTable(
   'payment',
   {
     id: uuid().primaryKey(),
-    orderId: integer('order_id')
+    orderId: uuid('order_id')
       .references(() => orders.id)
       .unique(),
     amount: numeric().notNull(),
